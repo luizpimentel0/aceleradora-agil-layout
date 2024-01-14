@@ -1,0 +1,196 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	list-style-type: none;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-smooth: antialiased;
+	font-family: 'Raleway', sans-serif;
+}
+
+.container {
+	width: 100dvw;
+	height: 100dvh;
+	display: grid;
+	place-items: center;
+}
+
+main {
+	display: grid;
+	max-width: 1024px;
+	width: 100%;
+
+	grid-template-columns: 1fr 2fr;
+	gap: 40px;
+}
+
+aside {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 16px;
+}
+
+aside ul {
+	list-style: none;
+}
+
+aside ul li {
+	padding: 5px 0;
+}
+
+aside ul li a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 200px;
+	width: 100%;
+}
+
+.main-title {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	margin-bottom: 64px;
+}
+
+.main-title img {
+	max-width: 48px;
+}
+
+.main-title h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.tasks-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.add-task {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+button,
+input[type="text"],
+select {
+	border: none;
+	font-size: .875rem;
+}
+
+label {
+	font-size: .875rem;
+	font-weight: 600;
+}
+
+input[type="text"],
+select {
+	border-bottom: 1px solid #444;
+	padding: 8px 32px 8px 8px;
+}
+
+select {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+button:focus,
+input[type="text"]:focus,
+select:focus {
+	outline: none;
+}
+
+input::placeholder {
+	color: #333;
+}
+
+button {
+	cursor: pointer;
+	background-color: #222;
+	color: #fefe;
+}
+
+.btn-add {
+	padding: 16px 32px;
+	border-radius: 32px;
+}
+
+.btn-delete {
+	border-radius: 50%;
+	height: 24px;
+	width: 24px;
+}
+
+div.day,
+div.night {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+
+.task-tab-title {
+	margin: 1rem;
+	display: flex;
+	align-items: center;
+
+	gap: 16px;
+}
+
+.task-tab-title img {
+	max-width: 32px;
+}
+
+.task-tab-title h2{
+	text-align: center;
+	font-size: 2rem;
+	margin: 32px 0;
+}
+
+.day-tasks,
+.night-tasks {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+.task {
+	display: grid;
+	grid-template-columns: 50px 1fr 30px;
+	align-items: center;
+	gap: 10px;
+
+	margin-bottom: 12px;
+}
+
+.fromLeft {
+  opacity:0;
+  transform: translateX(-20px);
+  animation: fromLeft .4s forwards;
+}
+
+@keyframes fromLeft {
+  to {
+    opacity:1;
+    transform: initial;
+  }
+}
+.task label.completed {
+	text-decoration: line-through;
+}

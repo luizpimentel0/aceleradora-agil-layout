@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<title>Lista de Tarefas</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./src/assets/css/style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container fromLeft">
+		<main>
+			<aside>
+				<img src="./src/assets/images/profile-picture.svg" alt="foto de perfil" />
+				<h2>Anakin Skywalker</h2>
+				<p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+				</ul>
+			</aside>
+			<section>
+				<div class="main-title fromLeft">
+					<h1>Lista de Tarefas</h1>
+					<img src="./src/assets/images/todo.svg" alt="to do icon">
+				</div>
+				<div class="add-task">
+					<label for="task-tab">Adicionar a: </label>
+					<select name="task-tab" id="task-tab">
+						<option value="day">Dia</option>
+						<option value="night">Noite</option>
+					</select>
+					<input type="text" id="new-task" placeholder="Digite sua nova tarefa" maxlength="30">
+					<button class="btn-add" onclick="addTask()">Adicionar</button>
+				</div>
+				<div class="tasks-container">
+					<div class="day">
+						<div class="task-tab-title">
+							<h2 class="tasks-tab-title">Dia</h2>
+							<img src="./src/assets/images/sun-black.svg" alt="sol">
+						</div>
+						<ol class="day-tasks">
+						</ol>
+					</div>
+					<div class="night">
+						<div class="task-tab-title">
+							<h2 class="tasks-tab-title">Noite</h2>
+							<img src="./src/assets/images/moon-black.svg" alt="sol">
+						</div>
+						<ol class="night-tasks">
+						</ol>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="src/assets/js/script.js"></script>
+</body>
+
+</html>
